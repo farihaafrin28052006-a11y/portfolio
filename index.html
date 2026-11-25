@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fariha Afrin Himika – Computer Science Portfolio</title>
+<meta name="description" content="Portfolio of Fariha Afrin Himika, second-year BSc Computer Science student at the University of Dundee, seeking front end web development opportunities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EEF3F7;--ink:#14253A;--muted:#4A5D73;--line:#C3D1DE;--cobalt:#2450B8;--white:#fff;--sun:#F4C25B;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--cobalt)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:9}
+.skip:focus{left:0}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;color:var(--ink);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero{padding:4rem 0 3.5rem}
+.hero h1{font-size:clamp(2.8rem,9.5vw,6.5rem);font-weight:800;letter-spacing:-.035em;max-width:11ch}
+.hero p.lead{font-size:clamp(1.15rem,2.4vw,1.4rem);max-width:38rem;margin:1.5rem 0 0;color:var(--ink)}
+.hero p.sub{max-width:38rem;color:var(--muted);margin:1rem 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;font-weight:600;text-decoration:none;border:2px solid var(--ink);border-radius:4px;color:var(--ink);background:transparent}
+.btn.primary{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn:hover{background:var(--sun);border-color:var(--ink);color:var(--ink)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.9rem,4.5vw,2.6rem);font-weight:700;margin-bottom:.5rem}
+.intro{color:var(--muted);max-width:40rem;margin:0 0 2rem}
+.project{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem 2.5rem;padding:1.75rem 0 1.75rem 1.25rem;border-left:5px solid var(--cobalt);margin-bottom:1.75rem;background:var(--white)}
+.project:nth-of-type(2){border-left-color:var(--sun)}
+.project:nth-of-type(3){border-left-color:var(--ink)}
+.project h3{font-size:1.5rem;font-weight:700}
+.project .kind{color:var(--muted);margin:.25rem 0 .75rem;font-size:.95rem}
+.project p{margin:.5rem 0;max-width:42rem}
+dl{margin:0;display:grid;gap:.75rem}
+dt{font-weight:600}
+dd{margin:0;max-width:42rem;padding-right:1.25rem}
+.project .body{padding-right:1.25rem}
+@media(min-width:52rem){.project{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
+.cols{display:grid;gap:2rem 3rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:52rem){.cols{grid-template-columns:1fr 1fr}}
+h3.sub{font-size:1.25rem;font-weight:700;margin:0 0 .75rem}
+ul.plain{margin:0;padding-left:1.1rem}
+ul.plain li{margin-bottom:.6rem;max-width:36rem}
+pre{margin:1rem 0 .5rem;background:var(--ink);color:#EAF1F8;padding:1rem;border-radius:4px;overflow-x:auto;font-size:.88rem;line-height:1.5}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.note{font-size:.92rem;color:var(--muted);max-width:36rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.93rem}
+footer p{max-width:46rem;margin:.4rem 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.hero{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:56rem){.hero{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1.5rem 0 0}
+.chips li{border:2px solid var(--ink);border-radius:99px;padding:.2rem .85rem;font-weight:600;font-size:.95rem;background:var(--white)}
+.frame{display:none;background:var(--white);border:2px solid var(--ink);border-radius:10px;box-shadow:10px 10px 0 var(--sun);overflow:hidden;transform:rotate(1.5deg);animation:rise .7s ease-out both}
+@media(min-width:56rem){.frame{display:block}}
+.frame .bar{display:flex;align-items:center;gap:.4rem;padding:.6rem .8rem;border-bottom:2px solid var(--ink);background:var(--paper)}
+.frame .dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--ink)}
+.frame .url{margin-left:.6rem;flex:1;font-size:.78rem;background:var(--white);border:1.5px solid var(--ink);border-radius:99px;padding:.15rem .7rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frame .page{padding:1.2rem}
+.frame .page b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;margin-bottom:.8rem}
+.frame .tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.frame .tabs span{font-size:.78rem;border:1.5px solid var(--ink);border-radius:99px;padding:.15rem .6rem}
+.frame .bubble{background:var(--cobalt);color:#fff;padding:.6rem .8rem;border-radius:12px 12px 12px 2px;font-size:.9rem;max-width:80%}
+.frame .bubble.me{background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);margin:.5rem 0 0 auto;border-radius:12px 12px 2px 12px}
+@keyframes rise{from{opacity:0;transform:translateY(16px) rotate(1.5deg)}to{opacity:1;transform:translateY(0) rotate(1.5deg)}}
+section>.wrap>h2::after{content:"";display:block;width:3rem;height:5px;background:var(--sun);margin-top:.6rem}
+.project{box-shadow:0 1px 0 var(--line),6px 6px 0 rgba(20,37,58,.08);transition:transform .2s,box-shadow .2s}
+.project:hover{transform:translateY(-3px);box-shadow:0 1px 0 var(--line),9px 9px 0 rgba(36,80,184,.2)}
+@media(prefers-reduced-motion:reduce){.frame{animation:none}.project{transition:none}.project:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#home">Fariha Afrin Himika</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero" id="home">
+  <div class="hero-text">
+  <h1>Fariha Afrin Himika</h1>
+  <p class="lead">Second-year Computer Science student at the University of Dundee, learning to build websites and software that people find clear and easy to use.</p>
+  <p class="sub">I have built a multi-section AI website with a chatbot, written a Java application, and analysed a machine-learning method for a group report. I am looking for front end web development opportunities where I can turn designs into working pages and keep learning from a team.</p>
+  <ul class="chips" aria-label="Skills"><li>HTML</li><li>CSS</li><li>Java</li><li>GitHub</li><li>Machine learning</li></ul>
+  <div class="actions">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" href="Fariha_Afrin_Himika_CV.pdf" download>Download my CV (PDF)</a>
+  </div>
+  </div>
+  <div class="frame" aria-hidden="true">
+    <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">AI Encyclopedia</span></div>
+    <div class="page"><b>Artificial Intelligence</b>
+      <div class="tabs"><span>Overview</span><span>Machine Learning</span><span>Deep Learning</span><span>Applications</span><span>Timeline</span></div>
+      <div class="bubble">Ask me about AI!</div>
+      <div class="bubble me">What does AI stand for?</div>
+    </div>
+  </div>
+</div>
+
+<section id="projects" aria-labelledby="projects-h">
+  <div class="wrap">
+    <h2 id="projects-h">Projects</h2>
+    <p class="intro">Three pieces of coursework, each with what I made, what I used, and what I did myself.</p>
+
+    <article class="project">
+      <div class="body">
+        <h3>AI Encyclopedia website</h3>
+        <p class="kind">Team project</p>
+        <p>A single-page website that explains artificial intelligence in sections: overview, machine learning, deep learning, real-world applications, an image gallery, a short quiz and a timeline from 1950 to 2017. It also has an “Ask me about AI” chatbot.</p>
+        <p class="links"><a href="https://farihaafrin28052006-a11y.github.io/Aiwebsite.github.io/">View live site</a> <a href="https://github.com/farihaafrin28052006-a11y/Aiwebsite.github.io">View code on GitHub</a></p>
+      </div>
+      <dl>
+        <div><dt>Technologies</dt><dd>HTML, CSS, GitHub and GitHub Pages</dd></div>
+        <div><dt>My role</dt><dd>I wrote the HTML structure and content, and added the AI chatbot. A teammate wrote the CSS styling.</dd></div>
+        <div><dt>Challenge and learning</dt><dd>Making a long page easy to navigate with a contents menu linking to each section. The chatbot gives pre-written answers, so I learned how to plan which questions it should handle.</dd></div>
+      </dl>
+    </article>
+
+    <article class="project">
+      <div class="body">
+        <h3>Fitness tracker application</h3>
+        <p class="kind">Individual coursework, Introduction to Software Development</p>
+        <p>A Java program that turns a distance in kilometres into a step count and prints step statistics in plain English, for example “3 thousands, 4 hundreds and 5 tens”. It comes with a written report explaining the design and testing.</p>
+      </div>
+      <dl>
+        <div><dt>Technologies</dt><dd>Java, object-oriented programming, console input with Scanner</dd></div>
+        <div><dt>My role</dt><dd>I designed and wrote all three classes and the report: StepStats stores and formats the data, Distance does the conversion, and UserInterfaceMain handles the menu.</dd></div>
+        <div><dt>Challenge and learning</dt><dd>Getting the formatting right: leaving out zero values, choosing singular or plural words, and placing commas and “and” correctly. I also learned why keeping each class to one job makes code easier to test.</dd></div>
+      </dl>
+    </article>
+
+    <article class="project">
+      <div class="body">
+        <h3>KNN breast tumour classification</h3>
+        <p class="kind">Group report, team of 3</p>
+        <p>A written analysis proposing K-nearest neighbours as an alternative model for classifying breast tumours as benign or malignant, using the Wisconsin Diagnostic Breast Cancer dataset. This is a design proposal and was not built as a working system.</p>
+      </div>
+      <dl>
+        <div><dt>Technologies</dt><dd>Machine-learning concepts: data cleaning, feature scaling, stratified splits, tuning k, and metrics including recall, F1-score and ROC-AUC</dd></div>
+        <div><dt>My role</dt><dd>I wrote the alternative-model section, including how KNN should be compared with the group’s baseline model.</dd></div>
+        <div><dt>Challenge and learning</dt><dd>Explaining why a missed malignant tumour matters more than a false alarm, so recall is the key measure. I learned to scale data using the training set only, so no information leaks into testing, and to state limits clearly: real clinical use would need testing and professional supervision.</dd></div>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <div class="wrap">
+    <h2 id="skills-h">Skills</h2>
+    <div class="cols" style="margin-top:1.5rem">
+      <div>
+        <h3 class="sub">Technical skills</h3>
+        <ul class="plain">
+          <li><strong>HTML:</strong> structuring a multi-section page, contents links, a quiz and a chatbot interface (AI Encyclopedia).</li>
+          <li><strong>CSS:</strong> working alongside a teammate’s stylesheet and fitting my page structure to it.</li>
+          <li><strong>Java:</strong> classes, methods, rounding and integer arithmetic, and user input (Fitness tracker).</li>
+          <li><strong>Machine-learning concepts:</strong> KNN, preprocessing and evaluation metrics (KNN report).</li>
+          <li><strong>GitHub:</strong> storing code in a repository and publishing a site with GitHub Pages.</li>
+        </ul>
+        <p class="note">Example from my fitness tracker, the method that converts kilometres to steps and splits the total into thousands, hundreds and tens:</p>
+<pre><code>public StepStats convert() {
+    long steps = Math.round(km * 1312);
+    int thousands = (int)(steps / 1000);
+    steps %= 1000;
+    int hundreds = (int)(steps / 100);
+    steps %= 100;
+    int tens = (int)(steps / 10);
+    return new StepStats(thousands, hundreds, tens);
+}</code></pre>
+      </div>
+      <div>
+        <h3 class="sub">Transferable skills</h3>
+        <ul class="plain">
+          <li><strong>Teamwork:</strong> I split the AI Encyclopedia with a teammate (my HTML, their CSS) and contributed a section to a group report. I also work as part of a restaurant team during busy services.</li>
+          <li><strong>Communication:</strong> I speak to customers all shift as a waitress at The Bridge, and I wrote a report explaining my Java design choices and tests.</li>
+          <li><strong>Working under pressure:</strong> I stay calm and accurate in busy service periods, including handling payments, while studying full time.</li>
+          <li><strong>Discipline and leadership:</strong> I was a cadet in the Bangladesh National Cadet Corps from 2022 to 2024, taking part in training, parades and community service.</li>
+          <li><strong>Languages:</strong> Bengali (native), Hindi (fluent), English (fluent).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cv" aria-labelledby="cv-h">
+  <div class="wrap">
+    <h2 id="cv-h">CV</h2>
+    <p class="intro">My two-page CV, written for a front end web developer role. It matches the content of this portfolio.</p>
+    <a class="btn primary" href="Fariha_Afrin_Himika_CV.pdf" download>Download CV (PDF)</a>
+  </div>
+</section>
+
+<section id="profiles" aria-labelledby="profiles-h">
+  <div class="wrap">
+    <h2 id="profiles-h">Profiles and contact</h2>
+    <p class="intro">Find me on LinkedIn, see my code on GitHub, or email me directly.</p>
+    <div class="links">
+      <a class="btn" href="https://www.linkedin.com/in/fariha-afrin-596343452">LinkedIn profile</a>
+      <a class="btn" href="https://github.com/farihaafrin28052006-a11y">GitHub profile</a>
+      <a class="btn" href="mailto:2711748@dundee.ac.uk">University email</a>
+      <a class="btn" href="mailto:farihaafrin28052006@gmail.com">Personal email</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Fariha Afrin Himika, BSc (Hons) Computer Science, University of Dundee. Made for module CS21001, Employability for Computing Professionals.</p>
+    <p>AI use: Claude, an AI assistant from Anthropic, helped me draft and organise the wording of this portfolio and my CV. The projects, experience and facts are my own, and I checked and edited the content before submitting.</p>
+  </div>
+</footer>
+</body>
+</html>
